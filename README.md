@@ -12,10 +12,10 @@
 
 ## 特性
 
-* 支持 xterm 4.x
+* 基于 Xterm 4.x
 * 支持 TypeScript
-* 支持多行输入
-* 支持历史命令记录
+* 多行输入
+* 历史命令记录
 
 ## 使用方法
 
@@ -34,7 +34,7 @@ $ npm install local-terminal
 
 option 的默认配置如下：
 
-``` 
+``` json
 {
     historySize: 10
 }
@@ -42,7 +42,7 @@ option 的默认配置如下：
 
 ### read(prompt, continuationPrompt) -> Promise
 
-* prompt: 命令行提示符
+* _prompt_: 命令行提示符
 * continuationPrompt(可选): 多行输入时的提示符
 
 读取输入后的单行命令，返回一个 Promise 用于处理完成输入后的操作:
