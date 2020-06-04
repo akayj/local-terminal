@@ -36,12 +36,12 @@ $ yarn && yarn storybook
 
 ## API
 
-### constructor(term, option)
+### `constructor(term, option)`
 
 * xterm: `Terminal` 实例
-* option(可选): `IOptions` 配置项
+* _option_(可选): `IOptions` 配置项
 
-option 的默认配置如下：
+`option` 的默认配置如下：
 
 ``` js
 {
@@ -49,7 +49,7 @@ option 的默认配置如下：
 }
 ```
 
-### read(prompt, continuationPrompt) -> Promise
+### `read(prompt, continuationPrompt) -> Promise`
 
 * prompt: 命令行提示符
 * _continuationPrompt_(可选): 多行输入时的提示符
@@ -63,10 +63,10 @@ local.read("~ ")
     .catch(error => console.error("error: " + error))
 ```
 
-### print(message)
+### `print(message)`
 
 输入命令
 
-### clear()
+### `clear()`
 
 清屏
