@@ -17,20 +17,29 @@
 * 多行输入
 * 历史命令记录
 
-## 使用方法
+## 安装
+
+### 用户
 
 ``` shell
 $ npm install local-terminal
+```
+
+### 开发者
+``` sh
+$ # cd to git repo
+$ cd /path/to/local-terminal
+$ yarn && yarn storybook
 ```
 
 安装完成之后参考 [demo](https://github.com/KayneWang/local-terminal/blob/master/src/demos/react.stories.js) 使用
 
 ## API
 
-### constructor(xterm, option)
+### constructor(term, option)
 
-* xterm: xterm.js 实例
-* option(可选): local-terminal 配置
+* xterm: `Terminal` 实例
+* option(可选): `IOptions` 配置项
 
 option 的默认配置如下：
 
@@ -42,10 +51,10 @@ option 的默认配置如下：
 
 ### read(prompt, continuationPrompt) -> Promise
 
-* `prompt`: 命令行提示符
+* prompt: 命令行提示符
 * _continuationPrompt_(可选): 多行输入时的提示符
 
-读取输入后的单行命令，返回一个 Promise 用于处理完成输入后的操作:
+读取输入后的单行命令，返回一个 `Promise` 用于处理完成输入后的操作:
 
 ``` js
 const local = new localTerminal(xterm)
