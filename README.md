@@ -34,7 +34,7 @@ $ npm install local-terminal
 
 option 的默认配置如下：
 
-``` json
+``` js
 {
     historySize: 10
 }
@@ -42,8 +42,8 @@ option 的默认配置如下：
 
 ### read(prompt, continuationPrompt) -> Promise
 
-* _prompt_: 命令行提示符
-* continuationPrompt(可选): 多行输入时的提示符
+* `prompt`: 命令行提示符
+* _continuationPrompt_(可选): 多行输入时的提示符
 
 读取输入后的单行命令，返回一个 Promise 用于处理完成输入后的操作:
 
